@@ -30,7 +30,9 @@ public class Ejemplo06 {
         System.out.println("Ingrese las notas de los "
                 + "estudiantes de su materia");
         // true 
-        // while (bandera) {
+        // while (bandera) { estas dos lineas son exactamente lo mimso
+        // ya que boolean siempre que sea true entra en la condicion y si es
+        // falsa no entra
         while(bandera==true){
             System.out.println("Ingrese calificación");
             calificacion = entrada.nextDouble();
