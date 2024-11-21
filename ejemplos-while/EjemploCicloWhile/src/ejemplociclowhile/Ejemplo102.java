@@ -52,6 +52,8 @@ public class Ejemplo102 {
         entrada.useLocale(Locale.US);
         int limite_tabla ;
         int contador = 1;
+        int contador2 = 1;
+
         int operacion;
         int tabla;
         
@@ -71,26 +73,29 @@ public class Ejemplo102 {
                     tabla, 
                     contador,
                     operacion);
-            contador = contador + 1;
+
             String cadenasuma = "";
-            cadena = String.format("%sTabla de sumar\n", cadenasuma);
+           
+            cadenasuma = String.format("%sTabla de sumar\n", cadenasuma);
 
             while (contador <= limite_tabla){
             operacion = tabla + contador;
             
             cadenasuma = String.format("%s%d+%d=%d\n", 
-                    cadena, 
+                    cadenasuma, 
                     tabla, 
                     contador,
                     operacion);
-            contador = contador + 1;
+            contador2 = contador2 + 1;
             String cadenaresta = "";
             cadenaresta = String.format("%sTabla de restar\n", cadenaresta);
+            
+            
             while (contador <= limite_tabla){
             operacion = tabla - contador;
             
             cadenaresta = String.format("%s%d-%d=%d\n", 
-                    cadena, 
+                    cadenaresta, 
                     tabla, 
                     contador,
                     operacion);
