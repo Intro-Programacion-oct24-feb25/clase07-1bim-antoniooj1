@@ -53,8 +53,13 @@ public class Ejemplo102 {
         int limite_tabla ;
         int contador = 1;
         int contador2 = 1;
+        int contador3 = 1;
+
 
         int operacion;
+        int operacion2;
+        int operacion3;
+
         int tabla;
         
         System.out.println("Ingrese el limite de tabla a generar");
@@ -64,49 +69,50 @@ public class Ejemplo102 {
         
         String cadena = ""; // cadena acumulador
         cadena = String.format("%sTabla de multiplicar\n", cadena);
+        String cadenasuma = "";
+        cadenasuma = String.format("%sTabla de sumar\n", cadenasuma);
+        String cadenaresta = "";
+        cadenaresta = String.format("%sTabla de restar\n", cadenaresta);
         
         while (contador <= limite_tabla){
             operacion = tabla * contador;
+            operacion2 = tabla - contador;
+            operacion3 = tabla + contador;
+
+
             
             cadena = String.format("%s%d*%d=%d\n", 
                     cadena, 
                     tabla, 
                     contador,
                     operacion);
+            contador = contador + 1;
 
-            String cadenasuma = "";
-           
-            cadenasuma = String.format("%sTabla de sumar\n", cadenasuma);
-
-            while (contador <= limite_tabla){
-            operacion = tabla + contador;
-            
-            cadenasuma = String.format("%s%d+%d=%d\n", 
-                    cadenasuma, 
-                    tabla, 
-                    contador,
-                    operacion);
-            contador2 = contador2 + 1;
-            String cadenaresta = "";
-            cadenaresta = String.format("%sTabla de restar\n", cadenaresta);
-            
-            
-            while (contador <= limite_tabla){
-            operacion = tabla - contador;
-            
             cadenaresta = String.format("%s%d-%d=%d\n", 
                     cadenaresta, 
                     tabla, 
                     contador,
-                    operacion);
+                    operacion2);
             contador = contador + 1;
+
+            cadenasuma = String.format("%s%d+%d=%d\n", 
+                    cadenasuma, 
+                    tabla, 
+                    contador,
+                    operacion3);
+            contador = contador + 1;
+            
+
+           
+
+           
         }
                 
         System.out.printf("%s\n%s\n%s\n", cadena , cadenasuma, cadenaresta);
             }
         }
-    }
-}
+    
+
         
     
 
